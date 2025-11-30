@@ -1,0 +1,15 @@
+---
+interface Props {
+  name: string;
+  tagline?: string;
+}
+
+const { name, tagline = "Software Developer & Open Source Contributor" } = Astro.props;
+---
+
+<header class="bg-background border-b">
+  <div class="container mx-auto px-4 py-6">
+    <h1 class="text-3xl font-bold tracking-tight">{name}</h1>
+    <p class="text-muted-foreground mt-1">{tagline}</p>
+  </div>
+</header>

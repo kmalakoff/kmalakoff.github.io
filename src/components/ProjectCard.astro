@@ -1,0 +1,48 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url?: string;
+  github?: string;
+  npm?: string;
+}
+
+const { name, description, url, github, npm } = Astro.props;
+---
+
+<article class="rounded-lg border bg-card p-6 shadow-sm">
+  <h3 class="text-xl font-semibold tracking-tight">{name}</h3>
+  <p class="text-muted-foreground mt-2">{description}</p>
+  <div class="mt-4 flex flex-wrap gap-3">
+    {url && (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-medium text-primary hover:underline"
+      >
+        Website
+      </a>
+    )}
+    {github && (
+      <a
+        href={github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-medium text-primary hover:underline"
+      >
+        GitHub
+      </a>
+    )}
+    {npm && (
+      <a
+        href={npm}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-medium text-primary hover:underline"
+      >
+        npm
+      </a>
+    )}
+  </div>
+</article>

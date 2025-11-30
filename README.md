@@ -1,36 +1,47 @@
-[![Build Status](https://secure.travis-ci.org/kmalakoff/examples-kmalakoff.png)](http://travis-ci.org/kmalakoff/examples-kmalakoff)
+# Kevin Malakoff Portfolio
 
-This project provided some interesting hopefully sometimes event fun examples of using some of my open source libraries on GitHub!
+Personal portfolio and open source project showcase built with Astro, Tailwind CSS, and shadcn/ui.
 
-Current repositories:
-  * Background.js: Background job / task / worker library. Provides implementations for jobs, a job queue, a job list, and single and multiple array iterators.
-      -> https://github.com/kmalakoff/background
+**Live site**: [kmalakoff.github.io](https://kmalakoff.github.io)
 
-  * Backbone-Articulation.js: Add custom attribute serialization and deserialization to your Backbone.Models.
-      -> https://github.com/kmalakoff/backbone-articulation
-      -> Please note: until (or if!) my changes don't get updated into the main branch, you'll need to use this branch of Backbone.js: https://github.com/kmalakoff/backbone
+## Tech Stack
 
-  * Mixin.js: The 'reuse more' Javascript nano-framework. Stay DRY...mixin!
-      -> https://github.com/kmalakoff/mixin
+- [Astro](https://astro.build/) - Static site generator
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
+- [shadcn/ui](https://ui.shadcn.com/) - UI components
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
 
-  * Underscore-Awesomer.js: Awesome add-ons for Underscore.js.
-      -> https://github.com/kmalakoff/underscore-awesomer
+## Development
 
-Also, feel free to check out my blog: http://braincode.tumblr.com/
+```bash
+# Install dependencies
+npm install
 
-Enjoy!
+# Start dev server
+npm run dev
 
-Kevin
+# Build for production
+npm run build
 
+# Preview production build
+npm run preview
+```
 
-Building, Running and Testing the library
------------------------
+## Deployment
 
-###Installing:
+This site deploys automatically to GitHub Pages via GitHub Actions when pushing to the `master` branch.
 
-1. install node.js: http://nodejs.org
-2. install node packages: 'npm install'
+## Project Structure
 
-###Commands:
-
-Look at: https://github.com/kmalakoff/easy-bake
+```
+/
+├── public/
+│   └── images/          # Static images
+├── src/
+│   ├── components/      # Astro components
+│   ├── layouts/         # Page layouts
+│   ├── pages/           # Route pages
+│   └── styles/          # Global styles
+├── .github/workflows/   # GitHub Actions
+└── astro.config.mjs     # Astro configuration
+```

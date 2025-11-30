@@ -1,0 +1,45 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import ProjectList from "@/components/ProjectList.astro";
+import Footer from "@/components/Footer.astro";
+
+const projects = [
+  {
+    name: "Knockback.js",
+    description: "Knockback.js provides Knockout.js magic for Backbone.js Models and Collections.",
+    url: "http://kmalakoff.github.io/knockback/",
+    github: "https://github.com/kmalakoff/knockback",
+    npm: "https://www.npmjs.com/package/knockback"
+  },
+  {
+    name: "Background",
+    description: "Background.js provides a background job queue and list with array iterators for JavaScript.",
+    url: "http://kmalakoff.github.io/background/",
+    github: "https://github.com/kmalakoff/background",
+    npm: "https://www.npmjs.com/package/background"
+  },
+  {
+    name: "JSON-Serialize",
+    description: "JSON-Serialize provides conventions and helpers to manage serialization/deserialization of instances to JSON.",
+    url: "http://kmalakoff.github.io/json-serialize/",
+    github: "https://github.com/kmalakoff/json-serialize",
+    npm: "https://www.npmjs.com/package/json-serialize"
+  },
+  {
+    name: "Mixin",
+    description: "Mixin.js is the mixin library for JavaScript.",
+    url: "http://kmalakoff.github.io/mixin/",
+    github: "https://github.com/kmalakoff/mixin",
+    npm: "https://www.npmjs.com/package/mixin"
+  }
+];
+---
+
+<Layout title="Kevin Malakoff - Portfolio">
+  <Header name="Kevin Malakoff" />
+  <main>
+    <ProjectList title="Open Source Projects" projects={projects} />
+  </main>
+  <Footer />
+</Layout>
